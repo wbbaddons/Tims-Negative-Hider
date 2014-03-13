@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/option.xsd">
+	<import>
+		<options>
+			<option name="hidedisliked_trigger">
+				<categoryname>message.general.likes</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue><![CDATA[-1]]></defaultvalue>
+				<maxvalue><![CDATA[-1]]></maxvalue>
+			</option>
+			
+			<option name="hidedisliked_opacity">
+				<categoryname>message.general.likes</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue><![CDATA[30]]></defaultvalue>
+				<minvalue><![CDATA[10]]></minvalue>
+				<maxvalue><![CDATA[90]]></maxvalue>
+			</option>
+		</options>
+	</import>
+</data>	

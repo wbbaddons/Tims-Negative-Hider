@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/language.xsd" languagecode="en">
+	<category name="wcf.acp.option">
+		<item name="wcf.acp.option.hidedisliked_trigger"><![CDATA[Hide negatively rated contents]]></item>
+		<item name="wcf.acp.option.hidedisliked_trigger.description"><![CDATA[Like value at which contents will become transparent.]]></item>
+		<item name="wcf.acp.option.hidedisliked_opacity"><![CDATA[Visibility of transparent contents]]></item>
+		<item name="wcf.acp.option.hidedisliked_opacity.description"><![CDATA[Visibility in percent.]]></item>
+	</category>
+</language>
