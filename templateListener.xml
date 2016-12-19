@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/templateListener.xsd">
 	<import>
-		<templatelistener name="javascriptInclude">
-			<environment>user</environment>
-			<templatename>headInclude</templatename>
-			<eventname>javascriptInclude</eventname>
-			<templatecode><![CDATA[<script data-relocate="true" src="{$__wcf->getPath()}js/be.bastelstu.wcf.hideDisliked{if !ENABLE_DEBUG_MODE}.min{/if}.js"></script>]]></templatecode>
-		</templatelistener>
-		
 		<templatelistener name="javascriptInit">
 			<environment>user</environment>
 			<templatename>headInclude</templatename>
 			<eventname>javascriptInit</eventname>
-			<templatecode><![CDATA[be.bastelstu.wcf.hideDisliked.init({ trigger: {HIDEDISLIKED_TRIGGER}, opacity: {HIDEDISLIKED_OPACITY} });]]></templatecode>
+			<templatecode><![CDATA[/* be.bastelstu.wcf.hideDisliked.init({ trigger: {HIDEDISLIKED_TRIGGER}, opacity: {HIDEDISLIKED_OPACITY} }); */]]></templatecode>
+		</templatelistener>
+
+		<templatelistener name="requireConfig">
+			<environment>user</environment>
+			<templatename>headIncludeJavaScript</templatename>
+			<eventname>requireConfig</eventname>
+			<templatecode><![CDATA[
+;(requirejs.config({ map: { '*': { 'WoltLabSuite/Core/Ui/Like/Handler': 'Bastelstu.be/Like/HideDisliked' }
+                          , 'Bastelstu.be/Like/HideDisliked': { 'WoltLabSuite/Core/Ui/Like/Handler': 'WoltLabSuite/Core/Ui/Like/Handler' }
+                          } }));]]></templatecode>
 		</templatelistener>
 	</import>
 </data>
